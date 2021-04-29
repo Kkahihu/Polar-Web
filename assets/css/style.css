@@ -225,7 +225,7 @@ section {
   justify-content: space-between;
   padding: 10px 0 10px 30px;
   font-family: "Ubuntu", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: #013289;
   white-space: nowrap;
@@ -435,7 +435,8 @@ section {
   font-size: 48px;
   font-weight: 700;
   color: #012970;
-  opacity: 0.5;
+  opacity: 0.2;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .hero h2 {
