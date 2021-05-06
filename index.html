@@ -36,6 +36,10 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- Map Box Js File -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+
 </head>
 
 <body>
@@ -68,7 +72,7 @@
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero hero-img d-flex align-items-center" style="background-image: url(https://images.unsplash.com/photo-1619468129361-605ebea04b44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80)">
+  <section id="hero" class="hero hero-img d-flex">
 
     <div class="container">
       <div class="row">
@@ -81,7 +85,7 @@
             </div>
           </div>
         </div>
-         <div class=" col-lg-6 hero-img aos-init aos-animate" data-aos="zoom-out" data-aos-delay="200">
+         <div class=" d-flex flex-column p-5 align-content-center aos-init aos-animate" data-aos="zoom-out" data-aos-delay="200">
           <h1 data-aos="fade-up">UNLOCK THE POWER OF LOCATION INTELLIGENCE</h1>
         </div>
       
@@ -551,8 +555,8 @@
         <div class="row gy-4">
 
           <div class="col-lg-6">
-
-            <div class="row gy-4">
+<!-- 
+              <div class="row gy-4">
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-geo-alt"></i>
@@ -582,10 +586,30 @@
                 </div>
               </div>
             </div>
+          -->
+
+            <div id="map" style="position: absolute; left: 0; bottom: 0; width: 50%; height: 85%;"></div>
 
           </div>
 
           <div class="col-lg-6">
+           <h2 >Reach out on any of the channels below</h2>
+           <div class="col-md-10 info-box">
+             <div class="row gy-4">
+
+              <p>Address:<strong> 1870 Sliproad off Waiyaki Way Westlands </strong></p>
+
+              <p>Email: <strong>info@polardot.co.ke</strong></p>
+
+              <p>Call Us: <strong>0722986416</strong></p>
+
+             </div>
+            
+          
+           </div>
+
+              
+
             <form action="forms/contact.php" method="post" class="php-email-form">
               <div class="row gy-4">
 
@@ -697,6 +721,26 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+	mapboxgl.accessToken = 'pk.eyJ1Ijoia2thaGlodSIsImEiOiJja250ejI5bzIwN3dqMnBvYzcweHgwNXFxIn0.srN5TKtKJ-41-90L5wQqqA';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [36.796792, -1.261633],
+    zoom: 16
+    });
+ 
+  // Create a default Marker and add it to the map.
+  var marker1 = new mapboxgl.Marker()
+    .setLngLat([36.796792, -1.261633])
+    .addTo(map);
+ 
+  // Create a default Marker, colored black, rotated 45 degrees.
+  var marker2 = new mapboxgl.Marker({ color: '#4154f1' })
+    .setLngLat([36.796792, -1.261633])
+    .addTo(map);
+  </script>
 
 </body>
 
