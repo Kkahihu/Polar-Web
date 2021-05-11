@@ -182,11 +182,9 @@ section {
 }
 
 .header .logo img {
-  max-height: 37px;
-  margin-right: 6px;
-  width: 34.5%;
-  object-fit: cover;
-
+  margin-right: 3px;
+  width: 38%;
+  height: 20%;
 }
 
 .header .logo span {
